@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+    	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    	<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="//resources/leilao.js"></script>
+		<title>InterLeiloes - Cadastro</title>
+	</head>
+	<body class="container-fluid">
+		<header class="container-fluid">
+		<nav class="navbar navbar-inverse" ng-controller="login">
+       		<div class="container-fluid">
+    	   		<div class=" navbar-header">
+		 	  		<span class="navbar-brand">
+		 	  			<span class="glyphicon glyphico-house"></span>
+	      				<a href="index.html"> InterLeilão - Leilões Online</a>
+	      			</span>
+      			</div>
+      			<ul class="nav navbar-nav navbar-right">
+      			
+    			</ul>
+		       </div>
+    		 </nav>
+	    </header>
+		<section>
+			<form data-ng-submit="cadastrar()" name="formCadastro" class="form-horizontal" novalidate>
+				<div class="form-group" id="nome-group">
+					<div class="col-sm-5">
+						<label>
+							Nome:
+						</label>
+						<div id="divLinguagem">
+							<span name="msgNome" class="help-block" data-ng-show="formCadastro.txtNome.$error.required">Preencha o campo</span>
+							<input type="text" class="form-control col-lg-4" name="txtNome" data-ng-model="txtName" required/> 
+						</div>
+					</div>
+				</div>
+				<div class="form-group" id="cpf-group">
+					<div class="col-sm-5">
+						<label>
+							C.P.F:
+						</label>
+						<div id="divCpf">
+							<span id="msgCpf" class="help-block" data-ng-show="formCadastro.txtCpf.$error.required">Preencha o campo</span>
+							<input type="text" class="form-control col-lg-4 has-error" name="txtCpf" data-ng-model="txtCpf" required/>
+						</div>
+					</div>
+				</div>
+				<div class="form-group" id="rg-group">
+					<div class="col-sm-5">
+						<label>
+							R.G:
+						</label>
+						<div id="divRg">
+							<span id="msgRg" class="help-block" data-ng-show="formCadastro.txtRG.$error.required">Preencha o campo</span>
+							<input type="text" class="form-control col-lg-4 has-error" name="txtRg" data-ng-model="txtRg" required/>
+						</div>
+					</div>
+				</div>
+				<div class="form-group" id="age-group">
+					<div class="col-sm-5">
+						<label>
+							Idade:
+						</label>
+						<div id="divAge">
+							<span id="msgAge" class="help-block" data-ng-show="formCadastro.txtIdade.$error.required">Preencha o campo</span>
+							<input type="number" class="form-control col-lg-4 has-error" name="txtIdade" data-ng-model="txtAge" required/>
+						</div>
+					</div>
+				</div>
+				<div class="form-group" id="Ender-group">
+					<div class="col-sm-5">
+						<label>
+							Endereço:
+						</label>
+						<div id="divEnder">
+							<span id="msgEnder" class="help-block" data-ng-show="formCadastro.txtEndereco.$error.required">Preencha o campo</span>
+							<input type="text" class="form-control col-lg-4 has-error" name="txEndereco" data-ng-model="txtEnder" required/>
+						</div>
+					</div>
+				</div>
+				<div class="form-group" id="DtNasc-group">
+					<div class="col-sm-5">
+						<label>
+							Data de Nascimento:
+						</label>
+						<div id="divCpf">
+							<span id="msgDtNasc" class="help-block" data-ng-show="formCadastro.txtDtNasc.$error.required">Preencha o campo</span>
+							<input type="date" class="form-control col-lg-4 has-error" name="txtDtNasc" data-ng-model="txtNasc" required/>
+						</div>
+					</div>
+				</div>
+				<div class="form-group" id="cpf-group">
+					<div class="col-sm-5">
+						<label>
+							E-mail:
+						</label>
+						<div id="divEmail">
+							<span id="msgEmail" class="help-block" data-ng-show="formCadastro.txtEmail.$error.required">Preencha o campo</span>
+							<input type="email" class="form-control col-lg-4 has-error" name="txtEmail" data-ng-model="txtEmail" required/>
+						</div>
+					</div>
+				</div>
+				<div class="form-group" id="Pwd-group">
+					<div class="col-sm-5">
+						<label>
+							Senha:
+						</label>
+						<div id="divPwd">
+							<span id="msgPwd" class="help-block" data-ng-show="formCadastro.txtPwd.$error.required">Preencha o campo</span>
+							<input type="password" class="form-control col-lg-4 has-error" name="txtPwd" data-ng-model="txtPass" required/>
+						</div>
+					</div>
+				</div>
+				<div class="form-group" id="conf-group">
+					<div class="col-sm-5">
+						<label>
+							Confirmar senha:
+						</label>
+						<div id="divConf">
+							<span id="msgConf" class="help-block" data-ng-show="formCadastro.txtConf.$error.required">Preencha o campo</span>
+							<input type="password" class="form-control col-lg-4 has-error" name="txtConf" data-ng-model="txtCpw" required/>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-5">
+						<button type="submit" class="btn btn-primary" data-ng-disabled="formCadastro.$invalid">
+							Cadastrar
+						</button>
+					</div>
+				</div>
+			</form>
+		</section>	
+	</body>
+</html>
